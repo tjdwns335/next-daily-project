@@ -4,12 +4,11 @@ import { catStyled } from "./style";
 
 const SSG = async () => {
   const response = await fetch(`https://catfact.ninja/fact`);
-  const results = await response.json();
-  const cat: cat = results;
+  const catFact: cat = await response.json();
   return (
     <div className={catStyled.divStyle}>
-      <p className={catStyled.factStyle}>{cat.fact}</p>
-      <p className={catStyled.lengthStyle}>length : {cat.length}</p>
+      <p className={catStyled.factStyle}>{catFact.fact}</p>
+      <p className={catStyled.lengthStyle}>length : {catFact.length}</p>
     </div>
   );
 };

@@ -4,19 +4,19 @@ import React, { useEffect, useState } from "react";
 import { catStyled } from "./style";
 
 const CSR = () => {
-  const [cat, setCat] = useState<cat | null>(null);
+  const [catFact, setCatFact] = useState<cat | null>(null);
   useEffect(() => {
     const fetchCat = async () => {
       const response = await fetch(`https://catfact.ninja/fact`);
-      const results = await response.json();
-      setCat(results);
+      const result: cat = await response.json();
+      setCatFact(result);
     };
     fetchCat();
   }, []);
   return (
     <div className={catStyled.divStyle}>
-      <p className={catStyled.factStyle}>{cat?.fact}</p>
-      <p className={catStyled.lengthStyle}>length : {cat?.length}</p>
+      <p className={catStyled.factStyle}>{catFact?.fact}</p>
+      <p className={catStyled.lengthStyle}>length : {catFact?.length}</p>
     </div>
   );
 };

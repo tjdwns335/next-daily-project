@@ -2,17 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { navStyle } from "@/app/style";
 
 const inter = Inter({ subsets: ["latin"] });
-
-type style = {
-  navClassName: string;
-  LinkClassName: string;
-};
-const navStyle: style = {
-  navClassName: "p-8 flex gap-2.5 justify-center",
-  LinkClassName: "text-xl py-1.5 px-2.5 bg-orange-300 text-teal-600",
-};
 
 export const metadata: Metadata = {
   title: "Daily-Project",
@@ -30,7 +22,7 @@ export default function RootLayout({
         <nav className={navStyle.navClassName}>
           <Link
             className={navStyle.LinkClassName}
-            href="/SSG"
+            href="/"
           >
             SSG
           </Link>

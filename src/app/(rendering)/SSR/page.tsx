@@ -1,6 +1,6 @@
 import SSR from "@/app/components/rendering/SSR";
 import React from "react";
-import { pageStyled } from "../style";
+import { pageStyled } from "../renderingStyle";
 
 function SSRPage() {
   return (

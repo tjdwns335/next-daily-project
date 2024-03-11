@@ -1,6 +1,6 @@
 import CSR from "@/app/components/rendering/CSR";
 import React from "react";
-import { pageStyled } from "../style";
+import { pageStyled } from "../renderingStyle";
 
 function CSRpage() {
   return (

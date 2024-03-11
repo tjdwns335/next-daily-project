@@ -1,6 +1,6 @@
 import SSG from "@/app/components/rendering/SSG";
 import React from "react";
-import { pageStyled } from "../style";
+import { pageStyled } from "../renderingStyle";
 
 function SSGPage() {
   return (

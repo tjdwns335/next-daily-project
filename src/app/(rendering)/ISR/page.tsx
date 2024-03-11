@@ -1,8 +1,6 @@
 import ISR from "@/app/components/rendering/ISR";
 import React from "react";
-import { pageStyled } from "../style";
-
-export const revalidate = 5;
+import { pageStyled } from "../renderingStyle";
 
 function ISRPage() {
   return (
